@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Ding-Dong",
+  "version": "1.0.0",
+  "description": "Notifie quand le livreur Amazon est tout près.",
+  "permissions": ["storage", "notifications"],
+  "host_permissions": ["*://*.amazon.*/*"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.amazon.*/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "options.html",
+    "default_icon": {
+      "48": "icons/icon-48.png",
+      "96": "icons/icon-96.png"
+    }
+  },
+  "icons": {
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png"
+  }
+}
