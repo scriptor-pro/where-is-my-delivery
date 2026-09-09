@@ -23,9 +23,9 @@ d'extensions Firefox/Chrome actuel (vérifié — aucun concurrent connu).
 
 ## Portée
 
-- Fonctionne sur toutes les pages de suivi de livraison Amazon
-  (`*://*.amazon.*/*`), tous domaines Amazon confondus (.fr, .be, .com,
-  .de, etc.)
+- Fonctionne sur les pages de suivi de livraison Amazon, sur une liste
+  explicite des principaux domaines Amazon (.fr, .be, .com, .de, .co.uk,
+  .it, .es, .nl, .ca)
 - Nécessite que la page de suivi reste ouverte dans un onglet (pas de
   surveillance en arrière-plan sans onglet ouvert — limite acceptée,
   documentée dans le README)
@@ -101,15 +101,41 @@ icons/
 
 ## Permissions manifest.json
 
+Note : le format WebExtension `match pattern` n'autorise qu'un seul
+wildcard `*` en préfixe de sous-domaine (`*.exemple.com`), jamais un
+wildcard dans le TLD lui-même (`*.amazon.*` est invalide et rejeté par
+Firefox au chargement). Les domaines Amazon sont donc listés
+explicitement.
+
 ```json
 {
   "manifest_version": 3,
   "permissions": ["storage", "notifications"],
-  "host_permissions": ["*://*.amazon.*/*"],
+  "host_permissions": [
+    "*://*.amazon.fr/*",
+    "*://*.amazon.be/*",
+    "*://*.amazon.com/*",
+    "*://*.amazon.de/*",
+    "*://*.amazon.co.uk/*",
+    "*://*.amazon.it/*",
+    "*://*.amazon.es/*",
+    "*://*.amazon.nl/*",
+    "*://*.amazon.ca/*"
+  ],
   "background": { "scripts": ["background.js"], "persistent": true },
   "content_scripts": [
     {
-      "matches": ["*://*.amazon.*/*"],
+      "matches": [
+        "*://*.amazon.fr/*",
+        "*://*.amazon.be/*",
+        "*://*.amazon.com/*",
+        "*://*.amazon.de/*",
+        "*://*.amazon.co.uk/*",
+        "*://*.amazon.it/*",
+        "*://*.amazon.es/*",
+        "*://*.amazon.nl/*",
+        "*://*.amazon.ca/*"
+      ],
       "js": ["content.js"]
     }
   ]

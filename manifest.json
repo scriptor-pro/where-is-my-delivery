@@ -4,14 +4,34 @@
   "version": "1.0.0",
   "description": "Notifie quand le livreur Amazon est tout près.",
   "permissions": ["storage", "notifications"],
-  "host_permissions": ["*://*.amazon.*/*"],
+  "host_permissions": [
+    "*://*.amazon.fr/*",
+    "*://*.amazon.be/*",
+    "*://*.amazon.com/*",
+    "*://*.amazon.de/*",
+    "*://*.amazon.co.uk/*",
+    "*://*.amazon.it/*",
+    "*://*.amazon.es/*",
+    "*://*.amazon.nl/*",
+    "*://*.amazon.ca/*"
+  ],
   "background": {
     "scripts": ["background.js"],
     "persistent": true
   },
   "content_scripts": [
     {
-      "matches": ["*://*.amazon.*/*"],
+      "matches": [
+        "*://*.amazon.fr/*",
+        "*://*.amazon.be/*",
+        "*://*.amazon.com/*",
+        "*://*.amazon.de/*",
+        "*://*.amazon.co.uk/*",
+        "*://*.amazon.it/*",
+        "*://*.amazon.es/*",
+        "*://*.amazon.nl/*",
+        "*://*.amazon.ca/*"
+      ],
       "js": ["content.js"]
     }
   ],
