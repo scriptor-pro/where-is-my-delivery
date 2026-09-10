@@ -16,8 +16,7 @@
     "*://*.amazon.ca/*"
   ],
   "background": {
-    "scripts": ["background.js"],
-    "persistent": true
+    "scripts": ["background.js"]
   },
   "content_scripts": [
     {
