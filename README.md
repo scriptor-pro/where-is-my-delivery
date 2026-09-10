@@ -15,6 +15,8 @@ proximité fine du livreur.
 
 ## Installation (usage personnel, non publié)
 
+### Firefox
+
 1. Ouvrir `about:debugging#/runtime/this-firefox` dans Firefox
 2. Cliquer sur "Load Temporary Add-on…"
 3. Sélectionner le fichier `manifest.json` de ce répertoire
@@ -23,6 +25,20 @@ Note : une extension chargée en "temporaire" est retirée à la fermeture
 de Firefox et doit être rechargée à chaque session. Pour une
 installation permanente, signer l'extension via `web-ext sign` (compte
 développeur Mozilla requis, gratuit).
+
+### Chrome / Chromium
+
+1. Ouvrir `chrome://extensions`
+2. Activer le "Mode développeur" (interrupteur en haut à droite)
+3. Cliquer sur "Charger l'extension non empaquetée"
+4. Sélectionner le dossier `chrome/` de ce répertoire
+
+Version adaptée pour Manifest V3 Chrome : service worker au lieu d'un
+script d'arrière-plan classique, `chrome.*` au lieu de `browser.*`, et
+lecture du son via un document offscreen (`chrome/offscreen.html`)
+puisqu'un service worker n'a pas accès à l'API `Audio`. Comme pour
+Firefox, une extension chargée ainsi est retirée à la fermeture du
+navigateur.
 
 ## Configuration
 
