@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Ding-Dong",
+  "name": "Where Is My Delivery?",
   "version": "1.0.0",
   "description": "Notifie quand le livreur Amazon est tout près.",
   "permissions": ["storage", "notifications", "offscreen"],

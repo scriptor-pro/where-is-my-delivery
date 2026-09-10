@@ -1,4 +1,4 @@
-// Ding-Dong background script — owns the notify/dedupe decision and
+// Where Is My Delivery? background script — owns the notify/dedupe decision and
 // triggers the desktop notification + sound.
 //
 // NOTE: shouldNotify is duplicated from lib/notify-decision.js — this

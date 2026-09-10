@@ -1,4 +1,4 @@
-// Ding-Dong content script — runs on every Amazon page (per manifest's
+// Where Is My Delivery? content script — runs on every Amazon page (per manifest's
 // host_permissions), but only acts on delivery-tracking pages showing
 // "En cours de livraison". Watches the proximity card for its delivery
 // count and forwards changes to the background script.

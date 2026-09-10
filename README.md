@@ -1,4 +1,4 @@
-# Ding-Dong
+# Where Is My Delivery?
 
 Extension Firefox qui surveille une page de suivi de livraison Amazon
 ouverte dans un onglet et déclenche une notification (avec son) quand
@@ -42,7 +42,7 @@ navigateur.
 
 ## Configuration
 
-Cliquer sur l'icône Ding-Dong dans la barre d'outils pour régler le
+Cliquer sur l'icône de l'extension dans la barre d'outils pour régler le
 seuil de déclenchement (nombre de livraisons restantes avant la
 vôtre). Par défaut : 0 (notifie quand vous êtes le prochain arrêt).
 

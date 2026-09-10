@@ -1,4 +1,4 @@
-// Ding-Dong offscreen document — the only context in Chrome MV3 that can
+// Where Is My Delivery? offscreen document — the only context in Chrome MV3 that can
 // play audio, since the background service worker has no Audio API.
 // Created on demand by background.js, which posts a 'play-sound' message
 // here each time a notification fires.

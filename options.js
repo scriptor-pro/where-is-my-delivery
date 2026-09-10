@@ -1,4 +1,4 @@
-// Ding-Dong options popup — reads and writes the notification
+// Where Is My Delivery? options popup — reads and writes the notification
 // threshold to browser.storage.local, consumed by background.js.
 const input = document.getElementById('threshold');
 const savedLabel = document.getElementById('saved');

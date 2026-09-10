@@ -1,4 +1,4 @@
-// Ding-Dong background service worker (Chrome MV3) — owns the
+// Where Is My Delivery? background service worker (Chrome MV3) — owns the
 // notify/dedupe decision and triggers the desktop notification + sound.
 //
 // NOTE: shouldNotify is duplicated from lib/notify-decision.js — this is
