@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Ding-Dong — Politique de confidentialité</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: sans-serif; max-width: 640px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; color: #222; }
+    h1 { font-size: 1.4rem; }
+    h2 { font-size: 1.1rem; margin-top: 2rem; }
+    footer { margin-top: 3rem; font-size: 0.85rem; color: #666; }
+  </style>
+</head>
+<body>
+  <h1>Ding-Dong — Politique de confidentialité</h1>
+
+  <p>Ding-Dong est une extension de navigateur qui surveille une page de
+  suivi de livraison Amazon ouverte dans un onglet, et déclenche une
+  notification locale quand le livreur devient proche.</p>
+
+  <h2>Données traitées</h2>
+  <p>L'extension lit localement, dans l'onglet actif, le texte affiché
+  par Amazon sur sa carte de suivi de livraison en temps réel (le
+  compteur « N livraisons avant la vôtre »). Cette lecture se fait
+  uniquement sur les domaines Amazon déclarés dans l'extension.</p>
+
+  <h2>Ce qui n'est jamais fait</h2>
+  <ul>
+    <li>Aucune donnée n'est transmise à un serveur externe.</li>
+    <li>Aucune donnée n'est partagée avec un tiers.</li>
+    <li>Aucun compte, identifiant ou information personnelle n'est
+    collecté.</li>
+    <li>Aucun suivi publicitaire ni analytique.</li>
+  </ul>
+
+  <h2>Stockage local</h2>
+  <p>L'extension conserve, uniquement sur l'appareil de l'utilisateur
+  (via l'API <code>storage.local</code> du navigateur) :</p>
+  <ul>
+    <li>le seuil de notification choisi dans le popup de configuration ;</li>
+    <li>la liste des livraisons déjà notifiées, pour éviter les
+    notifications en double.</li>
+  </ul>
+  <p>Ces données restent locales, ne sont jamais synchronisées ni
+  transmises, et sont supprimées si l'extension est désinstallée.</p>
+
+  <h2>Permissions demandées</h2>
+  <ul>
+    <li><code>storage</code> — pour le stockage local décrit ci-dessus.</li>
+    <li><code>notifications</code> — pour afficher la notification
+    desktop quand le livreur est proche.</li>
+    <li>Accès aux domaines Amazon (<code>amazon.fr</code>,
+    <code>amazon.com</code>, etc.) — pour lire la page de suivi de
+    livraison ouverte par l'utilisateur.</li>
+  </ul>
+
+  <h2>Contact</h2>
+  <p>Code source ouvert et vérifiable :
+  <a href="https://github.com/scriptor-pro/ding-dong">github.com/scriptor-pro/ding-dong</a>.</p>
+
+  <footer>Dernière mise à jour : 10 septembre 2026.</footer>
+</body>
+</html>
